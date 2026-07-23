@@ -1,0 +1,23 @@
+1. 	Cách1 thực hiện việc lấy dữ liệu và ghép chuỗi HTML ngay tại 
+browser.
+	Cách2 thực hiện việc lấy dữ liệu và ghép chuỗi HTML tại server 
+trước khi gửi file HTML hoàn chỉnh lên server.
+
+2. 
+npm install --save-exact ejs@3.1.8
+
+3. 	Template engines dùng để tạo và hiển thị các trang HTML động 
+bằng cách kết hợp dữ liệu với mẫu giao diện. Express hỗ trợ rất nhiều 
+template engines (EJS, ...).
+
+4.  	Để sử dụng được 1 template engines:
+B1: cài đặt bằng terminal: npm --save-exact ejs@3.1.8
+B2: khai báo thư mục lưu trữ các template engines, định nghĩa template được sử dụng (app.set('view engine', 'ejs');)
+
+5. 	File .env được sử dụng để lưu trữ các tham số dùng chung. Thay vì 'hardcode', chúng ta sẽ cấu hình tập trung lại.
+Nếu lựa chọn giải pháp 'hardcode', mỗi lần user update password, thì dự án có bao nhiêu chỗ dùng 'PASSWORD' sẽ cần cập nhật bấy nhiêu nơi.
+
+6. 	Nodemon dùng để theo dõi các file trong dự án. Khi phát hiện các file thay đổi, nó sẽ tự động restart server => không cần phải chạy lại server khi thay đổi code trong quá trình phát triển web. 
+	Mặc định Nodemon sẽ theo dõi các file sau: .js, .mjs, coffee.
+
+7. 	Các thư viện không cần thiết cho production, chỉ cần trong quá trình development thì sẽ được khai báo trong mục "devDependencies". Việc làm này để tránh phải tải những thư viện không cần thiết khi deploy web.

@@ -1,0 +1,33 @@
+{
+  "name": "full_backend",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "homepage": "https://github.com/Hao0705/back-end#readme",
+  "bugs": {
+    "url": "https://github.com/Hao0705/back-end/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hao0705/back-end.git"
+  },
+  "license": "ISC",
+  "author": "Hao",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.5"
+  }
+}
