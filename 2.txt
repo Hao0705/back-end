@@ -1,0 +1,12 @@
+Máy tính
+│
+└── Docker Project (nodejs-sql)
+      │
+      └── MySQL Container (nodejs-sql-db-mysql-1)
+             │
+             └── MySQL Server
+                    │
+                    ├── Database: hoidanit
+                    ├── Database: mysql
+                    ├── Database: information_schema
+                    └── Database: performance_schema
