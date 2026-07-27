@@ -10,6 +10,9 @@ const port = process.env.PORT;
 // config template engine
 configViewEngine(app);
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // khai bao route 
 app.use(webRoutes);
 
