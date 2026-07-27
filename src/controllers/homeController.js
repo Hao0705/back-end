@@ -8,8 +8,7 @@ const getImage = (req, res) => {
     res.render('sample.js');
 }
 
-const postCreateUser = (req, res) => {
-    console.log(">>> req.body: ", req.body);
+const postCreateUser = async (req, res) => {
 
     let name = req.body.name;
     let email = req.body.email;
@@ -17,25 +16,23 @@ const postCreateUser = (req, res) => {
 
     // let {email, name, city} = req.body;
 
-    connection.query(
-        `INSERT INTO Users (email, name, city)
-        VALUES (?, ?, ?);`,
+    let [results, fields] = await connection.query(
+        `INSERT INTO Users (email, name, city) VALUES (?, ?, ?);`,
         [email, name, city],
+    );
 
-        function (err, results) {
-            if (err) {
-                console.log(err);
-                return res.status(500).send("Insert failed");
-            }
+    console.log(">>> check results: ", results);
+    res.send("Create user succeed!");
 
-            console.log(results);
-            res.send("Create a new user");
-        }
-    )
+}
+
+const createUserPage = (req, res) => {
+    res.render('createUser.ejs');
 }
 
 module.exports = {
     getHomepage,
     getImage,
-    postCreateUser
+    postCreateUser,
+    createUserPage
 };

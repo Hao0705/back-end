@@ -17,13 +17,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(webRoutes);
 
 
-// simple query 
-connection.query(
-    'SELECT * FROM Users u',
-    function (err, results, fields) {
-        console.log(">>>> Results=", results);
-    }
-)
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
